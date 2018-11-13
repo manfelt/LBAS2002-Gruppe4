@@ -47,6 +47,10 @@ INSERT INTO `proveniens` (`regnr`, `produsent`, `prod_aar`, `tidl_eiere`, `siste
 ('ABC.1236', 'Ida Treskjærer', 1928, 'Ida Mortensen', 'Ida Mortensen'),
 ('ABC.1237', 'Ida Treskjærer', 1920, 'Ida Mortensen', 'Ida Mortensen'),
 ('ABC.1238', 'Ukjent', 1800, 'Ida Mortensen', 'Ida Mortensen');
+('ABC.1244','Ukjent, Telemark',1875,'Bente Rolseth  m.fl.','Gunnar Berg f.1952');
+('ABC.1245','Karianne Larsen, Bodø',1902,'Bente Rolseth  m.fl.','Inga Rolseth');
+(ABC.1246','Karianne Larsen, Bodø',1902,'Bente Rolseth  m.fl.','Inga Rolseth');
+(ABC.1246','Karianne Larsen, Bodø',1902,'Birger Hansen  m.fl.','Bernt Ås');
 
 --
 -- Indexes for dumped tables
