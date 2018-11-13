@@ -2,7 +2,7 @@ from tkinter import *
 import archive_edit
 import archive_db
 import archive_statistics
-
+import matplotlib
 
 """
 Programmet består av følgende moduler:
@@ -15,7 +15,8 @@ For å kunne kjøre programmet, må du oppdatere archive_db modulen med påloggi
 Skrevet av:
 <11.09.2018>, <Majid Rouhani>, <1.0>
 Endret dato, endret av, versjon
-<02.11.2018>, <Berit Gudmundseth>, <1.1> Endret noen navn. 
+<02.11.2018>, <Berit Gudmundseth>, <1.1> Endret noen navn.
+<13.11.2018>, <Magnus Manfelt>, <1.2> Rettet på feil og mangler  
 -----------------------------------------------------------------------------------------------------------
 """
 
@@ -51,7 +52,14 @@ def view_materiale_statistics():
      Deretter kalles funkasjonen archive_statistics.show_bar_chart for å tegne grafen.
     """
     counts, materiale = archive_db.get_materialet_counts()
-    archive_statistics.show_bar_chart(materiale,counts,"Antall","Materialet" )
+    archive_statistics.show_bar_chart(materiale, counts, "Antall", "Materialet")
+
+
+def view_kategori_statistics():
+    counts, kategori = archive_db.get_kategori_counts()
+    archive_statistics.show_bar_chart(kategori, counts, "Antall", "Kategori")
+
+
 
 # Definerer aksjon for dobbeltklikk på en gjenstand i lista
 def edit_gjenstand(event):
@@ -61,6 +69,7 @@ def edit_gjenstand(event):
     """
     archive_edit.open_edit(root, search, result[result_listbox.curselection()[0]])
 
+print ("cats")
 """
 ****************************Hovedprogram****************************
 """

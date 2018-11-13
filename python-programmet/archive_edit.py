@@ -1,6 +1,7 @@
 from tkinter import *
 from archive_db import *
-
+from datetime import *
+import sys
 """
 Skrevet av: Majid Rouhani
 Opprettet: 11.09.2018
@@ -15,6 +16,7 @@ Endret dato, endret av, versjon
 <02.11.2018>, <Berit Gudmundseth>, <1.1> 4.1
 <03.11.2018>, <Maria Seljeseth>, <1.2> 4.2
 <03.11.2018>, <Simen Myhre>, <1.3> 4,3
+<06.11.2018>, <Magnus Manfelt>, <1.4> 4,4
 -----------------------------------------------------------------------------------------------------------
 """
 
@@ -76,7 +78,7 @@ def open_edit(root, search, gjenstand_data=None):
         """
         registreringsnr_val=registreringsnr.get()
         giver_val = giver.get()
-        innlemmet_dato_val = innlemmet_dato.get()
+        innlemmet_dato_val = valider_dato(innlemmet_dato.get())
         kommentar_val = ""
         mottatt_av_val = mottatt_av.get()
         plassering_val = plassering.get()
@@ -125,6 +127,18 @@ def open_edit(root, search, gjenstand_data=None):
         save_proveniens()
         messagebox.showinfo("Registrering", "Registrering av ny gjenstand er fullført!")
         window.destroy()
+
+
+    def valider_dato(date_str):
+        format_str = '%d.%m.%Y'
+        try:
+            datetime_obj = datetime.datetime.strptime(date_str, format_str)
+        except:
+            messagebox.showerror("Error", "Datoformat er ugyldig. Vennligst oppgi dato på formen dd.mm.yyyy")
+            sys.exit(0)
+
+            return date_str
+
 
     # Definerer aksjon for sletting
     def delete():
@@ -218,7 +232,7 @@ def open_edit(root, search, gjenstand_data=None):
     r+=1
     Label(generelt_group,text="Innlemmet dato:",width=25).grid(row=r,column=0,sticky=W)
     Entry(generelt_group,textvariable=innlemmet_dato,width=35).grid(row=r,column=1)
-    
+
     
     identifikasjon_group = LabelFrame(window, text="Identifikasjon", padx=5, pady=5)
     identifikasjon_group.grid(row=r,column=1,sticky=W)

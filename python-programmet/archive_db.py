@@ -15,12 +15,15 @@ Endret dato, endret av, versjon
 <02.11.2018>, <Berit Gudmundseth>, <1.1> 4.1 Registrere ny gjenstand og kategori. 
 <03.11.2018>, <Maria Seljeseth>, <1.2> 4.2 Søk
 <03.11.2018>, <Simen Myhre>, <1.3> 4.3 Slette gjenstand. 
+<06.11.2018>, <Magnus Bergh>, <1.4> 4.4 Validering på datoformat
+<10.11.2018>, <Mildri Haug>, <1.5> 4.5 Statistikk
 -----------------------------------------------------------------------------------------------------------
 """
 
 host = "mysql.stud.iie.ntnu.no"
 user = "" # Skriv inn brukernavnet ditt her
 password = "" # Skriv inn passordet ditt her
+
 
 def get_db_connection():
     if user=="":
@@ -109,6 +112,28 @@ def get_materialet_counts():
     print("get_materialet_counts: rowcount=" + str(len(materiale)))
 
     return counts, materiale
+
+
+def get_kategori_counts():
+    db = get_db_connection()
+    if not db:
+        sys.exit(0)
+
+    cursor = db.cursor()
+    cursor.execute('SELECT count(regnr),kategori_id FROM gjenstand group by kategori_id')
+
+    kategori = []
+    counts = []
+    for row in cursor:
+        kategori.append(row[0])
+        counts.append(row[1])
+
+    db.close()
+
+    print("get_kategori_counts: rowcount=" + str(len(kategori)))
+
+    return counts, kategori
+
 
 # Hent all informasjon om en gjenstand basert på regnr
 def hent_gjenstand(regnr):
