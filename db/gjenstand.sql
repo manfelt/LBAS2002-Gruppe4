@@ -57,6 +57,12 @@ INSERT INTO `gjenstand` (`regnr`, `navn`, `kategori_id`, `regdato`, `regav`, `in
 ('ABC.1241', 'Bibel', 5, '20.06.2006', 'Assistent Magnus', '3.07.2006', 'Anne Elinsen', 'Bernt Erntsen', 'H2.31', ''),
 ('ABC.1242', 'Slede', 2, '20.06.2006', 'Assistent Magnus', '5.07.2006', 'Anne Elinsen', 'Sara Dahl', 'H2.32', ''),
 ('ABC.1243', 'Ming vase', 2, '20.06.2006', 'Assistent Magnus', '5.07.2006', 'Anne Elinsen', 'Sara Dahl', 'H2.33', '');
+('ABC.1244','Kiste', 1, '05.04.2013','Henri Olsen', '29.04.2013',''Prosjektansvarlig Kari Bens', 'Gunnar Berg f.1952', 'M1.R2.P1.H7','Stor kiste med påmalte reinsdyr og blomster');
+('ABC.1245','Bolle', 3, '05.04.2013','Henri Olsen', '29.04.2013',''Prosjektansvarlig Kari Bens', 'Inga Rolseth', 'M3.R2.P2.H9','Serveringsbolle med fugle motiv.');
+('ABC.1246','Bolle', 3, '05.04.2013','Henri Olsen', '29.04.2013',''Prosjektansvarlig Kari Bens', 'Inga Rolseth', 'M3.R2.P2.H9','Serveringsbolle med fiske motiv.');
+('ABC.1247','Krittpipe', 5, '09.05.2013','Harald Pitt', '29.04.2013',''Prosjektansvarlig Kari Bens', 'Bernt Ås', 'M3.R2.P2.H9','Krittpipe i god stand.');
+
+
 
 --
 -- Indexes for dumped tables
