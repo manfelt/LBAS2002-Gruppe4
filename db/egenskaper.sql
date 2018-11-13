@@ -47,6 +47,10 @@ INSERT INTO `egenskaper` (`regnr`, `materiale`, `maal`, `tilstand`, `fys_egenska
 ('ABC.1236', 'Tre', '12 cm', 'Slitt', 'Liten rødmalt trehund, slitt maling. '),
 ('ABC.1237', 'Tre', '8 cm', 'God', ''),
 ('ABC.1238', 'Metall', '80 cm', 'Slitt', 'Falmet og slitt med merker på stoffet bak.');
+('ABC.1244','Tre Gran','L:90 cm, H:60 cm, D:42 cm','God','Malt kiste');
+('ABC.1245','Keramikk','L:30 cm, B:30 cm, D:15 cm','God','Keramikk Bolle');
+('ABC.1246','Keramikk','L:32 cm, B:32 cm, D:15 cm','God','Keramikk Bolle');
+('ABC.1246','Pipeleire','L:32 cm, B:5 cm','God','Krittpipe');
 
 --
 -- Indexes for dumped tables
