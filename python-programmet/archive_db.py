@@ -19,8 +19,8 @@ Endret dato, endret av, versjon
 """
 
 host = "mysql.stud.iie.ntnu.no"
-user = "beritgud" # Skriv inn brukernavnet ditt her
-password = "L1Hh7Pgd" # Skriv inn passordet ditt her
+user = "" # Skriv inn brukernavnet ditt her
+password = "" # Skriv inn passordet ditt her
 
 def get_db_connection():
     if user=="":
